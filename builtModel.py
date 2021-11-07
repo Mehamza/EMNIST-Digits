@@ -40,7 +40,7 @@ model.add(MaxPooling2D(pool_size=(2, 2)))
 model.add(Dropout(0.25))
 model.add(Flatten())
 model.add(Dense(256, activation='relu'))
-model.add(Dense(no_classes, activation='softmax'))
+model.add(Dense(num_classes, activation='softmax'))
 
 # Compile the model
 model.compile(loss=sparse_categorical_crossentropy,
@@ -50,7 +50,7 @@ model.compile(loss=sparse_categorical_crossentropy,
 # Fit data to model
 model.fit(input_train, target_train,
           batch_size=batch_size,
-          epochs=no_epochs,
+          epochs=num_epochs,
           verbose=verbosity,
           validation_split=validation_split)
 
