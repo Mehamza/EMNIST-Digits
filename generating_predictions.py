@@ -28,3 +28,9 @@ for sample in use_samples:
   # Convert into Numpy array
 samples_to_predict = np.array(samples_to_predict)
 print(samples_to_predict.shape)
+
+# Generate predictions for samples
+predictions = model.predict(samples_to_predict)
+print(predictions)
+Code language: PHP (php)
+
