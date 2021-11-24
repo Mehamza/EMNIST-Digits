@@ -18,9 +18,10 @@ verbosity = 1
 (input_train, target_train), (input_test, target_test) = emnist.load_data(type='digits')
 
 # Reshape data
+input_shape = (img_width, img_height, 1)
 input_train = input_train.reshape(input_train.shape[0], img_width, img_height, 1)
 input_test = input_test.reshape(input_test.shape[0], img_width, img_height, 1)
-input_shape = (img_width, img_height, 1)
+
 
 # Cast numbers to float32
 input_train = input_train.astype('float32')
